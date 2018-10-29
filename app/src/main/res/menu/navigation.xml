@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/mainpage"
+          android:id="@+id/tab_one" android:icon="@drawable/tabbar_ic_one_selector"/>
+    <item android:title="@string/classfiypage" android:id="@+id/tab_two"
+          android:icon="@drawable/tabbar_ic_two_selector"/>
+    <item android:title="@string/orderpage" android:id="@+id/tab_three"
+          android:icon="@drawable/tabbar_ic_three_selector"/>
+    <item android:title="@string/minepage" android:id="@+id/tab_four" android:icon="@drawable/tabbar_ic_four_selector"/>
+</menu>

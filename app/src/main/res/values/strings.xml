@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">YunCai</string>
+    <string name="mainpage">首页</string>
+    <string name="classfiypage">分类</string>
+    <string name="orderpage">订单</string>
+    <string name="minepage">我的</string>
+</resources>
