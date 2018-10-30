@@ -1,4 +1,4 @@
-package com.xnyc.yuncai
+package com.xnyc.yuncai.ui.viewModule
 
 import android.arch.lifecycle.ViewModel;
 

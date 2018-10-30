@@ -1,5 +1,6 @@
-package com.xnyc.yuncai
+package com.xnyc.yuncai.ui.activity
 
+import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
@@ -7,12 +8,16 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import com.xnyc.yuncai.R
+import com.xnyc.yuncai.adapter.ViewPagerAdapter
 import com.xnyc.yuncai.databinding.ActivityMainBinding
+import com.xnyc.yuncai.ui.fragment.TestFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var mBinding: ActivityMainBinding
     lateinit var menuItem: MenuItem
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
@@ -37,8 +42,9 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-
-
+        mBinding.bnvMain.enableAnimation(false)
+        mBinding.bnvMain.enableShiftingMode(false)
+        mBinding.bnvMain.enableItemShiftingMode(false)
         mBinding.bnvMain.setOnNavigationItemSelectedListener(object : NavigationView.OnNavigationItemSelectedListener,
             BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -53,9 +59,6 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         })
-
-
-
 
     }
 

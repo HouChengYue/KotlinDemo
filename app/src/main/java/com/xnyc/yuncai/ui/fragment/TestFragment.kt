@@ -1,19 +1,21 @@
-package com.xnyc.yuncai
+package com.xnyc.yuncai.ui.fragment
 
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.xnyc.yuncai.R
+import com.xnyc.yuncai.base.BaseBindFragment
 import com.xnyc.yuncai.databinding.TestFragmentBinding
+import com.xnyc.yuncai.ui.viewModule.TestViewModel
 
 
-class TestFragment : Fragment() {
+class TestFragment : BaseBindFragment<TestFragmentBinding>() {
     lateinit var tiltle: String;
     private lateinit var viewModel: TestViewModel
-    private lateinit var mBinding: TestFragmentBinding
+    protected lateinit var mBinding: TestFragmentBinding
 
 
     companion object {
@@ -25,21 +27,23 @@ class TestFragment : Fragment() {
         }
     }
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        mBinding = DataBindingUtil.inflate(layoutInflater, R.layout.test_fragment, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        mBinding = DataBindingUtil.inflate(inflater, setLayout(), container, false)
         return mBinding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(TestViewModel::class.java)
-        viewModel.tilte = tiltle
-        mBinding.bean=viewModel
 
+    override fun setLayout(): Int {
+        return R.layout.test_fragment
     }
 
+    override fun initView() {
+        viewModel = ViewModelProviders.of(this).get(TestViewModel::class.java)
+        viewModel.tilte = tiltle
+        mBinding.bean = viewModel
+    }
+
+    override fun loadData() {
+
+    }
 }

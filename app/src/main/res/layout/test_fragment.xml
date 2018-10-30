@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="bean" type="com.xnyc.yuncai.TestViewModel"/>
+        <variable name="bean" type="com.xnyc.yuncai.ui.viewModule.TestViewModel"/>
     </data>
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".TestFragment" android:id="@+id/frameLayout">
+            tools:context=".ui.fragment.TestFragment" android:id="@+id/frameLayout">
 
         <TextView
                 android:layout_width="wrap_content"
