@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_navi" app:startDestination="@id/plusOneFragment">
+
+    <fragment android:id="@+id/plusOneFragment" android:name="com.xnyc.yuncai.ui.fragment.PlusOneFragment"
+              android:label="PlusOneFragment">
+        <action android:id="@+id/action_plusOneFragment_to_plusOneFragment2" app:destination="@id/plusOneFragment2" app:popUpTo="@id/plusOneFragment2"/>
+
+    </fragment>
+    <fragment android:id="@+id/plusOneFragment2" android:name="com.xnyc.yuncai.ui.fragment.PlusOneFragment2"
+              android:label="PlusOneFragment2">
+        <action android:id="@+id/action_plusOneFragment2_to_testNavigationActivity"
+                app:destination="@id/testNavigationActivity"/>
+    </fragment>
+    <activity android:id="@+id/testNavigationActivity"
+              android:name="com.xnyc.yuncai.ui.activity.TestNavigationActivity" android:label="activity_test_navigation"
+              tools:layout="@layout/activity_test_navigation"/>
+</navigation>

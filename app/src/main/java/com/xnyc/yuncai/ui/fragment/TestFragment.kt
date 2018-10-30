@@ -13,7 +13,7 @@ import com.xnyc.yuncai.ui.viewModule.TestViewModel
 
 
 class TestFragment : BaseBindFragment<TestFragmentBinding>() {
-    lateinit var tiltle: String;
+     var tiltle: String="默认title";
     private lateinit var viewModel: TestViewModel
     protected lateinit var mBinding: TestFragmentBinding
 
