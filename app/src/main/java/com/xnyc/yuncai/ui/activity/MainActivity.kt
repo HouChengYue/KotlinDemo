@@ -1,37 +1,40 @@
 package com.xnyc.yuncai.ui.activity
 
 import android.annotation.SuppressLint
-import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.design.widget.NavigationView
-import android.support.v4.view.ViewPager
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 import com.xnyc.yuncai.R
 import com.xnyc.yuncai.adapter.ViewPagerAdapter
+import com.xnyc.yuncai.base.BaseBindActivity
 import com.xnyc.yuncai.databinding.ActivityMainBinding
+import com.xnyc.yuncai.ui.fragment.DataFragment
 import com.xnyc.yuncai.ui.fragment.TestFragment
 
-class MainActivity : AppCompatActivity() {
-    lateinit var mBinding: ActivityMainBinding
+class MainActivity : BaseBindActivity<ActivityMainBinding>() {
     lateinit var menuItem: MenuItem
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        setContentView(R.layout.activity_main)
         val viewPagerAdapter = ViewPagerAdapter(
             supportFragmentManager, listOf(
-                TestFragment.newInstance("主页"),
+//                TestFragment.newInstance("主页"),
+                DataFragment.newInstance(),
                 TestFragment.newInstance("分类"),
                 TestFragment.newInstance("订单"),
                 TestFragment.newInstance("我的")
             )
         )
+
+
+
         mBinding.vpMain.adapter = viewPagerAdapter
-        mBinding.vpMain.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+        mBinding.vpMain.addOnPageChangeListener(object : androidx.viewpager.widget.ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(p0: Int) {
+
             }
 
             override fun onPageScrolled(p0: Int, p1: Float, p2: Int) {

@@ -1,7 +1,7 @@
 package com.xnyc.yuncai.ui.fragment
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +15,7 @@ import com.xnyc.yuncai.R
  * Use the [PlusOneFragment2.newInstance] factory method to
  * create an instance of this fragment.
  */
-class PlusOneFragment2 : Fragment() {
+class PlusOneFragment2 : androidx.fragment.app.Fragment() {
 
 
     public override fun onCreateView(

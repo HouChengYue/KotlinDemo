@@ -1,6 +1,6 @@
 package com.xnyc.yuncai.ui.viewModule
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 class TestViewModel : ViewModel() {
     var tilte:String=""

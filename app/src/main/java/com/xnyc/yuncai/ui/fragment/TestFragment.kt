@@ -1,11 +1,11 @@
 package com.xnyc.yuncai.ui.fragment
 
-import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import com.xnyc.yuncai.R
 import com.xnyc.yuncai.base.BaseBindFragment
 import com.xnyc.yuncai.databinding.TestFragmentBinding
@@ -15,7 +15,6 @@ import com.xnyc.yuncai.ui.viewModule.TestViewModel
 class TestFragment : BaseBindFragment<TestFragmentBinding>() {
      var tiltle: String="默认title";
     private lateinit var viewModel: TestViewModel
-    protected lateinit var mBinding: TestFragmentBinding
 
 
     companion object {

@@ -4,4 +4,9 @@
     <string name="classfiypage">分类</string>
     <string name="orderpage">订单</string>
     <string name="minepage">我的</string>
+    <string name="service_error">服务器出错</string>
+    <string name="not_found">请求资源不存在</string>
+    <string name="timeout">请求超时</string>
+    <string name="network_wrong">网络出错</string>
+    <string name="unexpected_error">未知错误</string>
 </resources>

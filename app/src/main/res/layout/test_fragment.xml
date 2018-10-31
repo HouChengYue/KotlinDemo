@@ -4,7 +4,7 @@
     <data>
         <variable name="bean" type="com.xnyc.yuncai.ui.viewModule.TestViewModel"/>
     </data>
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".ui.fragment.TestFragment" android:id="@+id/frameLayout">
@@ -18,5 +18,5 @@
                 app:layout_constraintBottom_toBottomOf="parent" android:minHeight="0dp"
                 android:gravity="center" android:hint="fragment" android:layout_marginBottom="1dp"/>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

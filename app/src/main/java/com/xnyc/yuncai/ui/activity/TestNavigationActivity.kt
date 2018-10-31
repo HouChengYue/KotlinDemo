@@ -1,7 +1,7 @@
 package com.xnyc.yuncai.ui.activity
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import com.xnyc.yuncai.R
 

@@ -1,7 +1,7 @@
 package com.xnyc.yuncai.view
 
 import android.content.Context
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 import android.util.AttributeSet
 import android.view.MotionEvent
 
@@ -9,7 +9,7 @@ import android.view.MotionEvent
  * Creat by HCY on2018/10/30
  * 描述： 可以设置是否可以滑动的ViewPager
  */
-class CSViewPager : ViewPager {
+class CSViewPager : androidx.viewpager.widget.ViewPager {
     var isCanSlide = false// 是否爱可以滑动
 
     constructor(context: Context) : super(context) {}
