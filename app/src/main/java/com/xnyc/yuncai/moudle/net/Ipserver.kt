@@ -12,7 +12,7 @@ import retrofit2.http.*
  */
 interface Ipserver {
     //Get
-    @GET("user/{user}/repos")
+    @GET("users/{user}/repos")
     fun listRepos(@Path("user") user: String): Observable<List<Repo>>
 
 

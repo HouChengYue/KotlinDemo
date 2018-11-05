@@ -2,7 +2,10 @@ package com.xnyc.yuncai.ui.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.xnyc.yuncai.R
@@ -45,9 +48,7 @@ class MainActivity : BaseBindActivity<ActivityMainBinding>() {
             }
 
         })
-        mBinding.bnvMain.enableAnimation(false)
-        mBinding.bnvMain.enableShiftingMode(false)
-        mBinding.bnvMain.enableItemShiftingMode(false)
+
         mBinding.bnvMain.setOnNavigationItemSelectedListener(object : NavigationView.OnNavigationItemSelectedListener,
             BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -61,6 +62,13 @@ class MainActivity : BaseBindActivity<ActivityMainBinding>() {
                 }
                 return false
             }
+        })
+
+        var get = ViewModelProviders.of(this).get(MainMoudle::class.java)
+        get.data.observe(this, Observer {
+
+            Log.e("Main","Cruuent item is $it")
+            mBinding.vpMain.currentItem=it
         })
 
     }
